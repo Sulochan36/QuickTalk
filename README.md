@@ -65,3 +65,7 @@
 
 
 ---
+
+## 👨‍💻 Author
+
+Made with ❤️ by [Sulochan Mahajan](https://sulochan-mahajan.vercel.app/)
