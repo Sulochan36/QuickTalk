@@ -18,7 +18,7 @@ const __dirname = path.resolve();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://your-frontend.vercel.app"
+  "https://quick-talk-one.vercel.app/"
 ];
 
 app.use(express.json());
