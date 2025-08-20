@@ -16,16 +16,16 @@ dotenv.config();
 const PORT = process.env.PORT;
 const __dirname = path.resolve();
 
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://quick-talk-one.vercel.app/"
-];
+const allowedOrigin =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:5173" 
+    : "https://quick-talk-one.vercel.app";
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: allowedOrigin,
     credentials: true,
   })
 );
