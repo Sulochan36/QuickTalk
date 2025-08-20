@@ -4,14 +4,14 @@ import express from "express";
 
 const app = express();
 const server = http.createServer(app);
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://quick-talk-one.vercel.app/"
-];
+const allowedOrigin =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:5173"
+    : "https://quick-talk-one.vercel.app";
 
 const io = new Server(server, {
   cors: {
-    origin: allowedOrigins,
+    origin: allowedOrigin,
   },
 });
 
